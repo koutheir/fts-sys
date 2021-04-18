@@ -1,4 +1,4 @@
-#![cfg(test)]
+#![cfg(all(test, unix))]
 
 use std::os::raw::c_char;
 use std::ptr;
