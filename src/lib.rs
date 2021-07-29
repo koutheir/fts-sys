@@ -1,8 +1,6 @@
 #![cfg(unix)]
-#![doc(html_root_url = "https://docs.rs/fts-sys/0.2.0")]
-#![allow(non_upper_case_globals)]
-#![allow(non_camel_case_types)]
-#![allow(non_snake_case)]
+#![doc(html_root_url = "https://docs.rs/fts-sys/0.2.1")]
+#![allow(non_upper_case_globals, non_camel_case_types, non_snake_case)]
 #![allow(clippy::redundant_static_lifetimes)]
 
 /*!
