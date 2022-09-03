@@ -1,20 +1,20 @@
 [package]
-name = "fts-sys"
-description = "File hierarchy traversal functions (FTS)"
-version = "0.2.1" # Remember to update `html_root_url`.
-authors = ["Koutheir Attouchi <koutheir@gmail.com>"]
-edition = "2018"
-readme = "README.md"
-license = "MIT"
-keywords = [ "fts", "filesystem", "tree", "hierarchy" ]
-categories = [ "external-ffi-bindings", "filesystem" ]
-build = "build.rs"
-links = "c"
-repository = "https://github.com/koutheir/fts-sys"
+name          = "fts-sys"
+description   = "File hierarchy traversal functions (FTS)"
+version       = "0.2.2"                                    # Remember to update `html_root_url`.
+authors       = ["Koutheir Attouchi <koutheir@gmail.com>"]
+edition       = "2021"
+readme        = "README.md"
+license       = "MIT"
+keywords      = ["fts", "filesystem", "tree", "hierarchy"]
+categories    = ["external-ffi-bindings", "filesystem"]
+build         = "build.rs"
+links         = "c"
+repository    = "https://github.com/koutheir/fts-sys"
 documentation = "https://docs.rs/fts-sys"
 
 [target.'cfg(unix)'.dependencies]
 libc = { version = "0.2" }
 
 [build-dependencies]
-bindgen = { version = "0.59" }
+bindgen = { version = "0.60" }
