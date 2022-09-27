@@ -1,20 +1,8 @@
+#![doc = include_str!("../README.md")]
 #![cfg(unix)]
 #![doc(html_root_url = "https://docs.rs/fts-sys/0.2.2")]
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case)]
 #![allow(clippy::redundant_static_lifetimes)]
-
-/*!
-# `fts-sys`: Unsafe Rust bindings for FTS functions provided by `libc`
-
-The FTS functions enable traversing file hierarchies.
-
-## Versioning
-
-This project adheres to [Semantic Versioning].
-The `CHANGELOG.md` file details notable changes over time.
-
-[Semantic Versioning]: https://semver.org/spec/v2.0.0.html
-*/
 
 use libc::dev_t;
 use libc::ino_t;
