@@ -50,7 +50,7 @@ fn get_target_os() -> Option<String> {
             2
         }
 
-        _ => panic!("Unrecognized target triplet '{}'", target),
+        _ => panic!("Unrecognized target triplet '{target}'"),
     };
 
     Some(String::from(components[os_index]))
@@ -58,7 +58,6 @@ fn get_target_os() -> Option<String> {
 
 fn generate_bindings(out_dir: &Path) {
     let bindings = bindgen::Builder::default()
-        .rustfmt_bindings(true)
         .default_enum_style(bindgen::EnumVariation::ModuleConsts)
         .default_macro_constant_type(bindgen::MacroTypeVariation::Signed)
         .size_t_is_usize(true)
