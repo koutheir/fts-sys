@@ -58,6 +58,7 @@ fn get_target_os() -> Option<String> {
 
 fn generate_bindings(out_dir: &Path) {
     let bindings = bindgen::Builder::default()
+        .parse_callbacks(Box::new(bindgen::CargoCallbacks))
         .default_enum_style(bindgen::EnumVariation::ModuleConsts)
         .default_macro_constant_type(bindgen::MacroTypeVariation::Signed)
         .size_t_is_usize(true)
@@ -70,7 +71,7 @@ fn generate_bindings(out_dir: &Path) {
         .blocklist_type("(FTS|stat|timespec|dev_t|ino_t|nlink_t)")
         .allowlist_var("FTS_.+")
         //.clang_arg("-D_FILE_OFFSET_BITS=64")
-        .header("src/includes.c")
+        .header("src/fts-sys.h")
         .generate()
         .expect("fts-sys: Failed to generate Rust bindings for 'fts.h'.");
 
