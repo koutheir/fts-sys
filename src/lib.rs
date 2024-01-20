@@ -1,6 +1,6 @@
 #![doc = include_str!("../README.md")]
 #![cfg(unix)]
-#![doc(html_root_url = "https://docs.rs/fts-sys/0.2.7")]
+#![doc(html_root_url = "https://docs.rs/fts-sys/0.2.8")]
 #![warn(unsafe_op_in_unsafe_fn)]
 #![allow(
     non_upper_case_globals,

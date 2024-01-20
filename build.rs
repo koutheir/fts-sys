@@ -58,7 +58,7 @@ fn get_target_os() -> Option<String> {
 
 fn generate_bindings(out_dir: &Path) {
     let bindings = bindgen::Builder::default()
-        .parse_callbacks(Box::new(bindgen::CargoCallbacks))
+        .parse_callbacks(Box::new(bindgen::CargoCallbacks::new()))
         .default_enum_style(bindgen::EnumVariation::ModuleConsts)
         .default_macro_constant_type(bindgen::MacroTypeVariation::Signed)
         .size_t_is_usize(true)
