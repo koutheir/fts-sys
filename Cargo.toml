@@ -1,7 +1,7 @@
 [package]
 name          = "fts-sys"
 description   = "File hierarchy traversal functions (FTS)"
-version       = "0.2.8" # Remember to update `html_root_url`.
+version       = "0.2.9"                                     # Remember to update `html_root_url`.
 authors       = ["Koutheir Attouchi <koutheir@gmail.com>"]
 edition       = "2021"
 readme        = "README.md"
@@ -10,8 +10,9 @@ keywords      = ["fts", "filesystem", "tree", "hierarchy"]
 categories    = ["external-ffi-bindings", "filesystem"]
 build         = "build.rs"
 links         = "c"
-repository    = "https://github.com/koutheir/fts-sys"
 documentation = "https://docs.rs/fts-sys"
+homepage      = "https://codeberg.org/koutheir/fts-sys.git"
+repository    = "https://codeberg.org/koutheir/fts-sys.git"
 
 [target.'cfg(unix)'.dependencies]
 libc = { version = "0.2" }
